@@ -23,19 +23,19 @@ type EmbeddingState = {
 };
 
 const defaultState: EmbeddingState = {
-  isEmbedded: false,
-  hideSideNav: false,
-  hideFlowsPageNavbar: false,
+  isEmbedded: true,
+  hideSideNav: true,
+  hideFlowsPageNavbar: true,
   disableNavigationInBuilder: false,
-  hideFolders: false,
+  hideFolders: true,
   hideFlowNameInBuilder: false,
   hideExportAndImportFlow: false,
-  useDarkBackground: window.opener !== null,
-  hideHomeButtonInBuilder: false,
+  useDarkBackground: false,
+  hideHomeButtonInBuilder: true,
   emitHomeButtonClickedEvent: false,
   homeButtonIcon: 'logo',
-  hideDuplicateFlow: false,
-  hidePageHeader: false,
+  hideDuplicateFlow: true,
+  hidePageHeader: true,
 };
 
 const EmbeddingContext = createContext<{

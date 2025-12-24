@@ -24,17 +24,18 @@ export default defineConfig(({ command, mode }) => {
       // allowedHosts: ['your_exposed_localhost'],
       proxy: {
         '/api': {
-          target: 'http://127.0.0.1:3000',
+          target: 'https://automacao.useretem.com.br',
           secure: false,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
           headers: {
-            Host: '127.0.0.1:4200',
+            Host: 'automacao.useretem.com.br',
+            Origin: 'https://automacao.useretem.com.br',
           },
           ws: true,
         },
       },
-      port: 4200,
+      port: 4201,
       host: '0.0.0.0',
     },
 
